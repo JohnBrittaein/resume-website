@@ -1,0 +1,89 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin:20px; 
+  padding: 0; 
+  box-sizing: border-box; 
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Roboto Mono', monospace;
+}
+
+header {
+    display: flex;
+  justify-content: flex;
+    align-items: center; 
+    padding: 5px; 
+}
+
+.header-content {
+  margin-left: 20px;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info > div {
+    margin-bottom: 10px; 
+    display: flex; 
+    align-items: center; 
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.social-links i , a {
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.academics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+}
+
+.university-box {
+  display: flex;
+  align-items: center; 
+  padding: 10px;
+}
+
+.university-logo {
+  width: 100px; 
+  height: auto; 
+  margin-right: 20px; 
+}
+
+.university-info h3 {
+  margin-top: 0px; 
+}
+
+.university-info p {
+  margin: 5px 0; 
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+    }
+
+    .header-content, img {
+        width: 100%; 
+        text-align: center; 
+    }
+
+    img {
+        margin-top: 20px; 
+    }
+}
+
