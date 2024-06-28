@@ -1,9 +1,8 @@
 html, body {
   height: 100%;
   width: 100%;
-  margin:20px; 
+  margin:2px; 
   padding: 0; 
-  padding-bottom: 200px;
   box-sizing: border-box; 
   background-color: #000000;
   color: #ffffff;
@@ -67,6 +66,18 @@ header {
   margin: 5px 0; 
 }
 
+.java-projects {
+    display: flex;
+    align-items: center;
+}
+
+.java-project-item {
+    margin: 20px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 li {
   margin-bottom: 3px;
 }
@@ -80,7 +91,6 @@ li {
 .dropdown-content {
     display: none;
     position: flex;
-    min-width: 160px;
     z-index: 1;
 }
 
@@ -98,6 +108,10 @@ li {
 
     img {
         margin-top: 20px; 
+    }
+
+    .java-projects {
+        flex-direction: column;
     }
 }
 
