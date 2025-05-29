@@ -10,15 +10,28 @@ function toggleDropdown(dropdownID) {
 
 document.querySelectorAll('.project-item img').forEach((image) => {
     image.addEventListener('click', () => {
-        if (image.requestFullscreen) {
-            image.requestFullscreen();
-        } else if (image.mozRequestFullScreen) { 
-            image.mozRequestFullScreen();
-        } else if (image.webkitRequestFullscreen) {
-            image.webkitRequestFullscreen();
-        } else if (image.msRequestFullscreen) { 
-            image.msRequestFullscreen();
-        }
+        openLightbox(image.src);
     });
 });
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+function openLightbox(src) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    lightbox.style.display = 'flex';
+    lightboxImg.src = src;
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+}
+
+
+
 
