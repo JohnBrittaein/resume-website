@@ -130,6 +130,36 @@ a {
     margin: 5px 0;
 }
 
+.work-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Optional: subtle depth */
+}
+
+.work-logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.work-content {
+    flex: 1;
+}
+
+.work-content h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.work-content p {
+    margin: 2px 0;
+}
+
+
 .projects {
     display: flex;
     flex-wrap: wrap;
