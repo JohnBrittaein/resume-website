@@ -139,10 +139,10 @@ header {
   font-weight: bold;
   color: var(--primary-text);
   padding: 5px 10px;
-  transition: background-color 0.3s, color 0.3s;
   background: var(--lesstransparent-bg);
   border-radius: 8px;
   border: 1px solid transparent;
+  transition: color 0.3s, text-shadow 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
 .tab:hover {
@@ -150,8 +150,6 @@ header {
   color: var(--link-color);
   border-width: 1px;
   border-style: solid;
-  border-color: var(--link-color);
-  transition: color 0.3s, text-shadow 0.3s, border-color 0.3s;
 }
 
 .tab.active {
