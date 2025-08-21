@@ -11,6 +11,9 @@
 
   --navbar-bg: rgba(22, 22, 22, 0.85);
 
+  --semitransparent-bg: rgba(22, 22, 22, 0.35);
+  --lesstransparent-bg: rgba(22, 22, 22, 0.65);
+
   --bgradiant-color: rgba(0, 150, 0, 0.7);
   --shadow-color: rgba(7, 117, 4, 0.8);
 
@@ -34,11 +37,11 @@ body {
 
 body::after {
   content: "";
-  position: absolute;
+  position: fixed; /* fixed instead of absolute */
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100%;
+  height: 100vh; /* use viewport height */
   background: repeating-linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.15),
@@ -47,7 +50,9 @@ body::after {
     transparent 2px
   );
   pointer-events: none;
+  z-index: 9999; /* optional: ensures it’s on top */
 }
+
 
 header {
   background-image: url(images/Website_Header.png);
@@ -106,7 +111,54 @@ header {
   max-width: 1385px;
   margin: 0px auto;
   padding: 20px;
+  padding-bottom: 400px;
   box-sizing: border-box;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+  background: var(--semitransparent-bg);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0px 0;
+  padding: 5px;
+  background: var(--semitransparent-bg);
+  border-radius: 12px;
+}
+
+.tab{
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--primary-text);
+  padding: 5px 10px;
+  transition: background-color 0.3s, color 0.3s;
+  background: var(--lesstransparent-bg);
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.tab:hover {
+  background: var(--secondary-bg);
+  color: var(--link-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--link-color);
+}
+
+.tab.active {
+  background: var(--secondary-bg);
+  color: var(--link-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--link-color);
 }
 
 .heading-with-link {
@@ -163,12 +215,14 @@ a {
   align-items: center;
   padding: 10px;
   box-shadow: 0 2px 6px var(--shadow-color);
+  border-radius: 12px;
 }
 
 .university-logo {
   width: 100px;
   height: auto;
   margin-right: 20px;
+  border-radius: 8px;
 }
 
 .university-info h3 {
@@ -183,7 +237,7 @@ a {
   display: flex;
   align-items: flex-start;
   padding: 15px;
-  border-radius: 8px;
+  border-radius: 12px;
   margin-bottom: 20px;
   box-shadow: 0 2px 6px var(--shadow-color);
 }
@@ -192,7 +246,7 @@ a {
   width: 100px;
   height: auto;
   margin-right: 20px;
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .work-content {
@@ -209,27 +263,30 @@ a {
 }
 
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
   box-shadow: 0 2px 6px var(--shadow-color);
+  border-radius: 12px;
 }
 
 .project-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
-  margin: 10px;
-  padding: 15px;
+  width: 100%;
+  max-width: 400px;
+  height: 335px;
+  overflow: hidden;
+  background: var(--semitransparent-bg);
   box-sizing: border-box;
+  border-radius: 12px;
 }
 
 .project-item img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 200px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
 }
@@ -241,27 +298,18 @@ a {
 
 .project-item audio {
   width: 100%;
-  margin-top: 10px;
 }
 
 .video-container {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
-  height: 0;
   overflow: hidden;
-  border-radius: 8px;
-  margin: 10px 0;
 }
 
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: 200px;
   border: none;
-  border-radius: 8px;
 }
 
 #lightbox {
@@ -341,6 +389,12 @@ a {
   .portrait {
     margin: 50px 0 0 0;
   }
+
+  .tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
   .main-content {
     width: 95%;
