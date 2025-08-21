@@ -288,11 +288,12 @@ a {
   background: var(--semitransparent-bg);
   box-sizing: border-box;
   border-radius: 12px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .project-item:hover {
   box-shadow: 0 4px 12px var(--shadow-color);
-  transition: box-shadow 0.3s ease;
+  transform: scale(1.03);
 }
 
 .project-item img {
