@@ -1,290 +1,521 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Brittain - Resume</title>
+    <!-- Basic Info -->
+    <title>John Brittain - Resume & Portfolio</title>
+    <meta
+      name="description"
+      content="Resume, portfolio, and creative projects of John Brittain, Computer Engineer specializing in embedded systems, software development, and digital media."
+    />
+    <meta
+      name="keywords"
+      content="John Brittain, Resume, Computer Engineer, Portfolio, Embedded Systems, Software Development, Digital Media"
+    />
+    <meta name="author" content="John Brittain" />
+
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#0c0e0f" />
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Preconnect & Preload for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Defer JavaScript -->
     <script src="script.js" defer></script>
 
-</head>
+    <!-- Social Media / Open Graph -->
+    <meta property="og:title" content="John Brittain - Resume & Portfolio" />
+    <meta
+      property="og:description"
+      content="Computer Engineer with expertise in embedded systems, circuits, software development, and creative digital media."
+    />
+    <meta property="og:image" content="images/professionalportrait.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
 
-<body>
-    <div class="header">
-        <header>
-            <img src="images/professionalportrait.jpg" alt="Professional Portrait of John Brittain"
-                style="border: 3px solid #000000;width: 150px; height: auto;">
-            <div class="header-content">
-                <h1>John Brittain</h1>
-                <p>Computer Engineer</p>
-                <div class="contact-info">
-                    <div>
-                        <i class="fas fa-phone"></i>
-                        <span>+1 (515) 802-7420</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-envelope"></i>
-                        <span>brittainjohn4@gmail.com</span>
-                    </div>
-                    <div>
-                        <i class="fas fa-home"></i>
-                        <span>Ames Iowa, 50010</span>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <hr>
-    </div>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="John Brittain - Resume & Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Computer Engineer, software developer, and creative technologist. Explore my resume, academic background, and projects."
+    />
+    <meta name="twitter:image" content="images/professionalportrait.jpg" />
+  </head>
 
-    <nav class="navbar">
-        <a href="#about-me">About</a>
-        <a href="#academics">Academics</a>
-        <a href="#Portfolio">Projects</a>
+  <body>
+    <!-- Header -->
+    <header class="header" role="banner">
+      <img
+        src="images/professionalportrait.jpg"
+        alt="Professional portrait of John Brittain"
+        class="portrait"
+        loading="lazy"
+      />
+      <div class="header-content">
+        <h1>John Brittain</h1>
+        <p>Computer Engineer</p>
+        <div class="contact-info">
+          <div><i class="fas fa-phone"></i> <span>+1 (515) 802-7420</span></div>
+          <div>
+            <i class="fas fa-envelope"></i>
+            <span>johndbrittain@outlook.com</span>
+          </div>
+          <div><i class="fas fa-home"></i> <span>Ames Iowa, 50010</span></div>
+        </div>
+      </div>
+      <hr />
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <a href="#top">^</a>
+      <a href="#about-me">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#work-history">Work</a>
+      <a href="#Portfolio">Projects</a>
+      <a href="#bottom">_</a>
     </nav>
 
-
-    <div class="about-me">
-        <h2>About Me</h2>
-        <p>I am in my early 20's attending university for Computer Engineering. I am passionate about new technology,
-            music, and art. I enjoy learning new things. I don't believe in technical jargonning, so I'll let my work
-            speak for itself.</p>
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+      <!-- About Me -->
+      <section
+        id="about-me"
+        class="about-me"
+        role="region"
+        aria-labelledby="about-me-heading"
+      >
+        <h2 id="about-me-heading">About Me</h2>
+        <p>
+          I am in my early 20's attending university for Computer Engineering. I
+          am passionate about new technology, music, and art. I enjoy learning
+          new things. I don't believe in technical jargonning, so I'll let my
+          work speak for itself.
+        </p>
         <ul>
-            <li>Knowledge of varying coding languages: Java, C, Python, VHDL, HTML, CSS, JavaScript, VHDL, LabViEW, and more
-            </li>
-            <li>Embedded Systems programming
-            </li>
-            <li>Circuits and design
-            </li>
-            <li>Creative digital media
-            </li>
-            <li>Software applications such as Adobe Photoshop, Blender, ProTools, AbletonLive, Quartus Prime, Microsoft
-                Word/Excel, Fusion 360, Cinema 4D, LtSpice, etc.
-            </li>
+          <li>
+            Knowledge of varying coding languages: Java, C, Python, VHDL, HTML,
+            CSS, JavaScript, LabVIEW, and more
+          </li>
+          <li>Embedded Systems programming</li>
+          <li>Circuits and design</li>
+          <li>Creative digital media</li>
+          <li>
+            Software applications such as Adobe Photoshop, Blender, ProTools,
+            AbletonLive, Quartus Prime, Microsoft Word/Excel, Fusion 360, Cinema
+            4D, LtSpice, etc.
+          </li>
         </ul>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/john-brittain-539290274/" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="https://github.com/JohnBrittaein" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i> GitHub
-            </a>
+          <a
+            href="https://www.linkedin.com/in/john-brittain-539290274/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+          <a
+            href="https://github.com/JohnBrittaein"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
         </div>
-        <hr>
-    </div>
+        <hr />
+      </section>
 
-    <div class="academics">
-        <h2>Academics</h2>
+      <!-- Academics -->
+      <section
+        id="academics"
+        class="academics"
+        role="region"
+        aria-labelledby="academics-heading"
+      >
+        <h2 id="academics-heading">Academics</h2>
         <div class="university-box">
-            <img src="images/isucollegeofengineering.jpg" alt="Iowa State University" class="university-logo">
-            <div class="university-info">
-                <h3>Iowa State University, Ames IA</h3>
-                <p>Bachelor of Computer Engineering with a minor in Music Technology</p>
-                <p>GPA: 3.27 (current)</p>
+          <img
+            src="images/isucollegeofengineering.jpg"
+            alt="Iowa State University"
+            class="university-logo"
+            loading="lazy"
+          />
+          <div class="university-info">
+            <div class="heading-with-link">
+              <h3>Iowa State University, Ames IA</h3>
+              <a
+                href="https://www.iastate.edu/"
+                target="_blank"
+                class="link-arrow"
+                >-></a
+              >
             </div>
+            <p>
+              Bachelor of Computer Engineering with a minor in Music Technology
+            </p>
+            <p>GPA: 3.26 (current)</p>
+          </div>
         </div>
         <div class="university-box">
-            <img src="images/dmacc.jpg" alt="Des Moines Area Community College" class="university-logo">
-            <div class="university-info">
-                <h3>Des Moines Area Community College, Ankeny, IA</h3>
-                <p>Engineering (Pre-Engineering)</p>
-                <p>Cumulative GPA: 3.02 (2022 Summer)</p>
+          <img
+            src="images/dmacc.jpg"
+            alt="Des Moines Area Community College"
+            class="university-logo"
+            loading="lazy"
+          />
+          <div class="university-info">
+            <div class="heading-with-link">
+              <h3>Des Moines Area Community College, Ankeny IA</h3>
+              <a
+                href="https://www.dmacc.edu/"
+                target="_blank"
+                class="link-arrow"
+                >-></a
+              >
             </div>
+            <p>Engineering (Pre-Engineering)</p>
+            <p>Cumulative GPA: 3.02 (2022 Summer)</p>
+          </div>
         </div>
-        <hr>
-    </div>
+        <hr />
+      </section>
 
-    <div class="Work History">
-        <h2>Work History</h2>
+      <!-- Work History -->
+      <section
+        id="work-history"
+        class="work-history"
+        role="region"
+        aria-labelledby="work-history-heading"
+      >
+        <h2 id="work-history-heading">Work History</h2>
         <div class="work-item">
-            <div class="work-logo">
-                <img src="images/amesnationallablogo.jpg" alt="Ames National Laboratory Logo">
+          <div class="work-logo">
+            <img
+              src="images/amesnationallablogo.jpg"
+              alt="Ames National Laboratory Logo"
+              loading="lazy"
+            />
+          </div>
+          <div class="work-content">
+            <div class="heading-with-link">
+              <h3>Ames National Laboratory</h3>
+              <a
+                href="https://www.ameslab.gov"
+                target="_blank"
+                class="link-arrow"
+                >-></a
+              >
             </div>
-            <div class="work-content">
-                <h3>Software Developer / ALAB Assistant</h3>
-                <p><strong>Ames National Laboratory</strong></p>
-                <p>March 10, 2025 – Present</p>
-                <ul>
-                    <li>Collaborated with a team to develop <a href="https://rxnrover.github.io/">RxnRover</a>, an
-                        open-source lab automation software platform.</li>
-                    <li>Updated the RxnRover website, including API documentation, tutorials, and a plugin catalog using
-                        Sphinx.</li>
-                    <li>Developed RxnRover plugins and device drivers to control and communicate with lab equipment
-                        using LabVIEW.</li>
-                    <li>Incorporated user feedback to enhance usability and implement new features.</li>
-                    <li>Managed 45+ GitHub repositories as a member of the RxnRover organization.</li>
-                    <li>Provided technical support to scientists in lab environments, resolving hardware and software
-                        issues.</li>
-                    <li>Responded quickly and effectively to fix bugs and minimize lab downtime.</li>
-                    <li>Contributed to multiple experiments in collaboration with Ames and Oak Ridge National
-                        Laboratories.</li>
-                </ul>
-            </div>
+            <p>
+              <strong
+                >Software Developer / ALAB Assistant (Paid-Internship)</strong
+              >
+            </p>
+            <p>[March 10, 2025 – August 23, 2025]</p>
+            <p>
+              <strong
+                >Software Developer / ALAB Assistant (Paid-Contributor)</strong
+              >
+            </p>
+            <p>[August 23, Present]</p>
+            <ul>
+              <li>
+                Collaborated with a team to develop
+                <a
+                  href="https://rxnrover.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >RxnRover</a
+                >, an open-source lab automation software platform.
+              </li>
+              <li>
+                Updated the RxnRover website, including API documentation,
+                tutorials, and a plugin catalog using Sphinx.
+              </li>
+              <li>
+                Developed RxnRover plugins and device drivers to control and
+                communicate with lab equipment using LabVIEW.
+              </li>
+              <li>
+                Incorporated user feedback to enhance usability and implement
+                new features.
+              </li>
+              <li>
+                Managed 45+ GitHub repositories as a member of the RxnRover
+                organization.
+              </li>
+              <li>
+                Provided technical support to scientists in lab environments,
+                resolving hardware and software issues.
+              </li>
+              <li>
+                Responded quickly and effectively to fix bugs and minimize lab
+                downtime.
+              </li>
+              <li>
+                Contributed to multiple experiments in collaboration with Ames
+                and Oak Ridge National Laboratories.
+              </li>
+            </ul>
+          </div>
         </div>
+      </section>
 
-    </div>
-
-
-    <div class="Portfolio">
-        <h2>Portfolio</h2>
+      <!-- Portfolio -->
+      <section
+        id="Portfolio"
+        class="portfolio"
+        role="region"
+        aria-labelledby="portfolio-heading"
+      >
+        <h2 id="portfolio-heading">Portfolio</h2>
 
         <p><strong>Personal Projects</strong></p>
         <div class="projects">
-            <div class="project-item">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/kbrcETvXoP0" frameborder="0" allowfullscreen> </iframe>
-                </div>
+          <div class="project-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/kbrcETvXoP0"
+                title="Personal Project Demo"
+                frameborder="0"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
             </div>
+          </div>
         </div>
 
         <p><strong>Engineering Projects</strong></p>
         <div class="projects">
-            <div class="project-item">
-                <img src="images/sequencerproject.png" alt="Sequencer Diagram">
-                <p>12 Step Digital Sequencer</p>
-                <a href="documents/CPRE 281 Report of Final Project.pdf" target="_blank" rel="noopener noreferrer">View
-                    the full project report</a>
-            </div>
+          <div class="project-item">
+            <img
+              src="images/sequencerproject.png"
+              alt="Sequencer Diagram"
+              loading="lazy"
+            />
+            <p>12 Step Digital Sequencer</p>
+            <a
+              href="documents/CPRE 281 Report of Final Project.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View the full project report</a
+            >
+          </div>
 
-            <div class="project-item">
-                <img src="images/IMG_8652.jpeg" alt="Clean Up Robot">
-                <p>Clean Up Robot</p>
-                <a href="https://www.youtube.com/shorts/fbf2P8uOj04" target="_blank" title="Demo Video">Watch the Demo
-                    Video</a><br>
-                <a href="documents/CPR E 2880_Final Project Proposal_Group A5-1.pdf" target="_blank"
-                    rel="noopener noreferrer">View the full project report</a>
-            </div>
+          <div class="project-item">
+            <img
+              src="images/IMG_8652.jpeg"
+              alt="Clean Up Robot"
+              loading="lazy"
+            />
+            <p>Clean Up Robot</p>
+            <a
+              href="https://www.youtube.com/shorts/fbf2P8uOj04"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Watch the Demo Video</a
+            ><br />
+            <a
+              href="documents/CPR E 2880_Final Project Proposal_Group A5-1.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View the full project report</a
+            >
+          </div>
 
-            <div class="project-item">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/nsHbnm8vbSw" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p>Modular Sequencer in MAX</p>
-                <a href="documents/MUS3460_FinalProjectReport_JohnBrittain.pdf" target="_blank"
-                    rel="noopener noreferrer">View the full project report</a>
+          <div class="project-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/nsHbnm8vbSw"
+                title="MAX Modular Sequencer"
+                frameborder="0"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
             </div>
+            <p>Modular Sequencer in MAX</p>
+            <a
+              href="documents/MUS3460_FinalProjectReport_JohnBrittain.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View the full project report</a
+            >
+          </div>
 
-            <div class="project-item">
-                <img src="images/HardwareScheduledProcessorSchematic.png" alt="MIPS Processor Schematic">
-                <p>MIPS CPUS</p>
-                <a href="documents/Proj3_report.pdf" target="_blank" rel="noopener noreferrer">View the full project
-                    report</a>
-            </div>
+          <div class="project-item">
+            <img
+              src="images/HardwareScheduledProcessorSchematic.png"
+              alt="MIPS Processor Schematic"
+              loading="lazy"
+            />
+            <p>MIPS CPUs</p>
+            <a
+              href="documents/Proj3_report.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View the full project report</a
+            >
+          </div>
         </div>
 
         <p><strong>Compositions</strong></p>
         <div class="projects">
-            <div class="project-item">
-                <p>Binary Bond</p>
-                <audio controls>
-                    <source src="audiofiles/MUS 246 Final Project.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                </audio>
-            </div>
-            <div class="project-item">
-                <p>Sound Collage</p>
-                <audio controls>
-                    <source src="audiofiles/Project 1 _Sound Collage.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                </audio>
-            </div>
-            <div class="project-item">
-                <p>Silly Funny Ringtone</p>
-                <audio controls>
-                    <source src="audiofiles/SilltyFunnyRingTone.mp3" type="audio/mp3">
-                    Your browser does not support the audio tag.
-                </audio>
-            </div>
+          <div class="project-item">
+            <p>Binary Bond</p>
+            <audio controls>
+              <source
+                src="audiofiles/MUS 246 Final Project.mp3"
+                type="audio/mp3"
+              />
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+          <div class="project-item">
+            <p>Sound Collage</p>
+            <audio controls>
+              <source
+                src="audiofiles/Project 1 _Sound Collage.mp3"
+                type="audio/mp3"
+              />
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
+          <div class="project-item">
+            <p>Silly Funny Ringtone</p>
+            <audio controls>
+              <source
+                src="audiofiles/SilltyFunnyRingTone.mp3"
+                type="audio/mp3"
+              />
+              Your browser does not support the audio tag.
+            </audio>
+          </div>
         </div>
 
         <p><strong>3D Artwork</strong></p>
         <div class="projects">
-            <div class="project-item">
-                <img src="images/Golden Penguin.png" alt="Golden Penguin">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Tutorial11.png" alt="Abstract grey spheres on a sandy beach">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Tutorial 10.png"
-                    alt="Abstract alien landscape with needle like formations emerging from dense fog">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Golden Face.png" alt="Golden face">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Wine Glass.png" alt="Two whine glasses in solid white background">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Tutorial 9.png" alt="Dark wine glass next to candle">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Surreal Scene Close Uniform Refletion Colors.png" alt="Abstract and surreal scene ">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Project3ARTIS3080.png" alt="Birds on power lines with CCTV cameras as heads">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Project 2 Still Life Finished.png"
-                    alt="Still life 3D rendering with a candle, bottle, pirate ship clock and a crystal ball">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Final Project Render 1.png" alt="Tornado ripping through the countryside">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Final Project Render 2.png" alt="View of a tornado up close">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Final Project Render 3.png"
-                    alt="Close up image of a tornado ripping up the countryside">
-            </div>
-
-            <div class="project-item">
-                <img src="images/Final Project Render 4.png" alt="Base of a tornado, looking up the shaft">
-            </div>
-
+          <div class="project-item">
+            <img
+              src="images/Golden Penguin.png"
+              alt="Golden Penguin"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Tutorial11.png"
+              alt="Abstract grey spheres on a sandy beach"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Tutorial 10.png"
+              alt="Abstract alien landscape"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Golden Face.png"
+              alt="Golden face"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Wine Glass.png"
+              alt="Two wine glasses on white background"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Tutorial 9.png"
+              alt="Dark wine glass next to candle"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Surreal Scene Close Uniform Refletion Colors.png"
+              alt="Abstract surreal scene"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Project3ARTIS3080.png"
+              alt="Birds on power lines with CCTV cameras as heads"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Project 2 Still Life Finished.png"
+              alt="Still life rendering"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Final Project Render 1.png"
+              alt="Tornado ripping through countryside"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Final Project Render 2.png"
+              alt="Tornado close up"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Final Project Render 3.png"
+              alt="Close up tornado image"
+              loading="lazy"
+            />
+          </div>
+          <div class="project-item">
+            <img
+              src="images/Final Project Render 4.png"
+              alt="Looking up inside tornado"
+              loading="lazy"
+            />
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div id="lightbox" onclick="closeLightbox()">
-            <img id="lightbox-img" src="">
-        </div>
-
-
-        <div class="spacer" style="height:500px;"></div>
-
-</body>
-
-<footer class="footer">
-    <div class="footer-content">
+    <!-- Footer -->
+    <footer class="footer" id="bottom" role="contentinfo">
+      <div class="footer-content">
+        <div><i class="fas fa-phone"></i> <span>+1 (515) 802-7420</span></div>
         <div>
-            <i class="fas fa-phone"></i>
-            <span>+1 (515) 802-7420</span>
+          <i class="fas fa-envelope"></i> <span>johndbrittain@outlook.com</span>
         </div>
-        <div>
-            <i class="fas fa-envelope"></i>
-            <span>brittainjohn4@gmail.com</span>
-        </div>
-        <div>
-            <i class="fas fa-home"></i>
-            <span>Ames Iowa, 50010</span>
-        </div>
+        <div><i class="fas fa-home"></i> <span>Ames Iowa, 50010</span></div>
         <p>&copy; 2025 John Brittain</p>
-    </div>
-</footer>
-
-</body>
-
+      </div>
+    </footer>
+  </body>
 </html>
