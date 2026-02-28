@@ -73,6 +73,8 @@
     <a href="#academics">Academics</a>
     <a href="#work-history">Work</a>
     <a href="#Portfolio">Projects</a>
+    <a href="#writings">Writings</a>
+    <a href="#contact">Contact</a>
     <a href="#bottom">_</a>
   </nav>
 
@@ -82,22 +84,26 @@
     <section id="about-me" class="about-me" aria-labelledby="about-me-heading">
       <h2 id="about-me-heading">About Me</h2>
       <p>
-        I am in my early 20's attending university for Computer Engineering. I
+        I am a soon-to-be graduate of Iowa State University with a Bachelor of Computer Engineering degree. I
         am passionate about new technology, music, and art. I enjoy learning
-        new things. I don't believe in technical jargonning, so I'll let my
+        new things. I don't believe too much in technical jargonning, so I'll let my
         work speak for itself.
       </p>
       <ul>
         <li>
-          Knowledge of varying coding languages: Java, C, Python, VHDL, HTML,
+          Knowledge of varying coding languages: Java, C, C++, Python, VHDL, HTML,
           CSS, JavaScript, LabVIEW, and more
         </li>
         <li>Embedded Systems programming</li>
+        <li>Embedded Systems design and development</li>
+        <li>Computer Architecture</li>
+        <li>FPGA development</li>
         <li>Circuits and design</li>
         <li>Creative digital media</li>
+        <li>Machine Learning and AI</li>
         <li>
           Software applications such as Adobe Photoshop, Blender, ProTools,
-          AbletonLive, Quartus Prime, Microsoft Word/Excel, Fusion 360, Cinema
+          AbletonLive, Quartus Prime, Vivado, Vitus, Microsoft Word/Excel, Fusion 360, Cinema
           4D, LtSpice, etc.
         </li>
       </ul>
@@ -106,6 +112,8 @@
           title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
         <a href="https://github.com/JohnBrittaein" target="_blank" rel="noopener noreferrer" title="GitHub"><i
             class="fab fa-github"></i> GitHub</a>
+        <a href="documents/Resume.pdf" target="_blank" rel="noopener noreferrer" title="Resume"><i
+            class="fas fa-file-alt"></i> Resume</a>
       </div>
       <hr>
     </section>
@@ -156,7 +164,7 @@
           <p>
             <strong>Software Developer / ALAB Assistant (Paid-Internship)</strong>
           </p>
-          <p>[March 10, 2025 – August 23, 2025]</p>
+          <p>[March 10, 2025 - August 23, 2025]</p>
           <p>
             <strong>Software Developer / ALAB Assistant (Paid-Contributor)</strong>
           </p>
@@ -206,7 +214,7 @@
 
       <ul class="tabs">
         <li data-tab-target="#personal-projects" class="tab">Personal</li>
-        <li data-tab-target="#engineering-projects" class="active tab" >Engineering</li>
+        <li data-tab-target="#engineering-projects" class="active tab">Engineering</li>
         <li data-tab-target="#audio-projects" class="tab">Audio</li>
         <li data-tab-target="#art-projects" class="tab">Artwork</li>
       </ul>
@@ -219,26 +227,105 @@
                 <iframe src="https://www.youtube.com/embed/kbrcETvXoP0" title="Personal Project Demo" allowfullscreen
                   loading="lazy"></iframe>
               </div>
+              <div class="project-body">
+                <p class="project-title">Personal Project</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>Emulation of the terminal minigame within the Fallout game series.</dd>
+                    <dt>Role</dt>
+                    <dd>Sole developer - designed and implemented all aspects of the terminal emulator.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Game development, Python, UI/UX design, terminal emulation.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>PyGame.</dd>
+                  </dl>
+                </details>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-body">
+                <p class="project-title">Cat VS Dogs AI Classifier</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>A Python-based image classifier that uses machine learning to distinguish between cats and dogs.</dd>
+                    <dt>Role</dt>
+                    <dd>Sole developer - designed, trained, and evaluated the model.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Python, machine learning, image classification, neural networks.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>Python, TensorFlow.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="https://github.com/JohnBrittaein/Cat-VS-Dogs" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+                  <a href="documents/Cat-VS-Dogs.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> View the full project report</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div id="engineering-projects" data-tab-content class="active">
           <div class="projects">
+
             <div class="project-item">
               <img src="images/sequencerproject.png" alt="Sequencer Diagram" loading="lazy">
-              <p>12 Step Digital Sequencer</p>
-              <a href="documents/CPRE_281_Report_of_Final_Project.pdf" target="_blank" rel="noopener noreferrer">View
-                the full project report</a>
+              <div class="project-body">
+                <p class="project-title">12 Step Digital Sequencer</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>A 12-step digital sequencer implemented on an FPGA that generates a programmable sequence of
+                      output signals at a variable tempo.</dd>
+                    <dt>Role</dt>
+                    <dd>Sole developer - designed and implemented all digital logic, timing circuits, and user
+                      interface.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>VHDL, FPGA development, digital logic design, finite state machines, Quartus Prime.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>Quartus Prime, DE10-Lite FPGA board, ModelSim.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="documents/CPRE_281_Report_of_Final_Project.pdf" target="_blank" rel="noopener noreferrer"><i
+                      class="fas fa-file-alt"></i> View the full project report</a>
+                </div>
+              </div>
             </div>
 
             <div class="project-item">
               <img src="images/IMG_8652.jpeg" alt="Clean Up Robot" loading="lazy">
-              <p>Clean Up Robot</p>
-              <a href="https://www.youtube.com/shorts/fbf2P8uOj04" target="_blank" rel="noopener noreferrer">Watch the
-                Demo Video</a><br>
-              <a href="documents/CPRE_2880_Final_Project_Proposal_Group_A5-1.pdf" target="_blank"
-                rel="noopener noreferrer">View the full project report</a>
+              <div class="project-body">
+                <p class="project-title">Clean Up Robot</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>An autonomous robot designed to detect and collect objects from a defined area using onboard
+                      sensors, motor control, and 3D printed gripper arm.</dd>
+                    <dt>Role</dt>
+                    <dd>Team member - contributed to embedded software, sensor integration, robotic arm, and overall
+                      system design.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Embedded C, sensor integration, motor control, team collaboration, hardware debugging, robotics.
+                    </dd>
+                    <dt>Resources Used</dt>
+                    <dd>Microcontroller, GitHub, CyBot, Fusion360, BambuLab 3D printer.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="https://www.youtube.com/shorts/fbf2P8uOj04" target="_blank" rel="noopener noreferrer"><i
+                      class="fab fa-youtube"></i> Watch the demo video</a>
+                  <a href="documents/CPRE_2880_Final_Project_Proposal_Group_A5-1.pdf" target="_blank"
+                    rel="noopener noreferrer"><i class="fas fa-file-alt"></i> View the full project report</a>
+                </div>
+              </div>
             </div>
 
             <div class="project-item">
@@ -246,43 +333,111 @@
                 <iframe src="https://www.youtube.com/embed/nsHbnm8vbSw" title="MAX Modular Sequencer" allowfullscreen
                   loading="lazy"></iframe>
               </div>
-              <p>Modular Sequencer in MAX</p>
-              <a href="documents/MUS3460_FinalProjectReport_JohnBrittain.pdf" target="_blank"
-                rel="noopener noreferrer">View the full project report</a>
+              <div class="project-body">
+                <p class="project-title">Modular Sequencer in MAX</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>A modular audio sequencer built in Max/MSP featuring configurable signal routing, timing, and
+                      real-time control.</dd>
+                    <dt>Role</dt>
+                    <dd>Sole developer - designed all signal routing, timing logic, and UI patches from scratch.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Max/MSP patching, digital audio signal processing, MIDI sequencing, real-time audio programming.
+                    </dd>
+                    <dt>Resources Used</dt>
+                    <dd>Cycling '74 Max/MSP.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="documents/MUS3460_FinalProjectReport_JohnBrittain.pdf" target="_blank"
+                    rel="noopener noreferrer"><i class="fas fa-file-alt"></i> View the full project report</a>
+                </div>
+              </div>
             </div>
 
             <div class="project-item">
               <img src="images/HardwareScheduledProcessorSchematic.png" alt="MIPS Processor Schematic" loading="lazy">
-              <p>MIPS CPUs</p>
-              <a href="documents/Proj3_report.pdf" target="_blank" rel="noopener noreferrer">View the full project
-                report</a>
+              <div class="project-body">
+                <p class="project-title">MIPS CPUs</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>Designed and implemented MIPS processor architectures including single-cycle and pipelined CPU
+                      designs with hazard detection.</dd>
+                    <dt>Role</dt>
+                    <dd>Designer - created schematics, RTL designs, and simulation testbenches.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Computer architecture, VHDL, pipeline design, hazard detection and forwarding, simulation.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>Quartus Prime, ModelSim, VHDL.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="documents/Proj3_report.pdf" target="_blank" rel="noopener noreferrer"><i
+                      class="fas fa-file-alt"></i> View the full project report</a>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
         <div id="audio-projects" data-tab-content>
           <div class="projects">
+
             <div class="project-item">
-              <p>Binary Bond</p>
-              <audio controls>
-                <source src="audiofiles/MUS_246_Final_Project.mp3" type="audio/mp3">
-                Your browser does not support the audio tag.
-              </audio>
+              <div class="project-body">
+                <p class="project-title">Binary Bond</p>
+<audio controls>
+                  <source src="audiofiles/MUS_246_Final_Project.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
             </div>
+
             <div class="project-item">
-              <p>Sound Collage</p>
-              <audio controls>
-                <source src="audiofiles/Project_1_Sound_Collage.mp3" type="audio/mp3">
-                Your browser does not support the audio tag.
-              </audio>
+              <div class="project-body">
+                <p class="project-title">Sound Collage</p>
+<audio controls>
+                  <source src="audiofiles/Project_1_Sound_Collage.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
             </div>
+
             <div class="project-item">
-              <p>Silly Funny Ringtone</p>
-              <audio controls>
-                <source src="audiofiles/SilltyFunnyRingTone.mp3" type="audio/mp3">
-                Your browser does not support the audio tag.
-              </audio>
+              <div class="project-body">
+                <p class="project-title">Silly Funny Ringtone</p>
+<audio controls>
+                  <source src="audiofiles/SilltyFunnyRingTone.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
             </div>
+
+            <div class="project-item">
+              <div class="project-body">
+                <p class="project-title">Getting Wine Drunk at a Restaurant and Passing Out</p>
+<audio controls>
+                  <source src="audiofiles/Getting_Wine_Drunk_at_Restaurant_and_Passing_Out.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="project-body">
+                <p class="project-title">Sea of Tranquility</p>
+<audio controls>
+                  <source src="audiofiles/Sea_of_Tranquility.mp3" type="audio/mp3">
+                  Your browser does not support the audio tag.
+                </audio>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -332,6 +487,75 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- Reflections & Writings -->
+    <section id="writings" class="writings" aria-labelledby="writings-heading">
+      <h2 id="writings-heading">Reflections &amp; Writings</h2>
+      <div class="writings-grid">
+
+        <div class="writing-card">
+          <div class="writing-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="writing-info">
+            <h3>Reflection on General Education at ISU</h3>
+            <p>A written reflection on the value and experience of general education requirements at Iowa State
+              University.</p>
+            <a href="documents/Reflection on General Education At ISU.pdf" target="_blank"
+              rel="noopener noreferrer">Read PDF -></a>
+          </div>
+        </div>
+
+        <div class="writing-card">
+          <div class="writing-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="writing-info">
+            <h3>Cumulative Reflection from my Experience at Iowa State University</h3>
+            <p>A personal narrative exploring cumulative academic and personal growth throughout the university
+              experience.</p>
+            <a href="documents/A Reflective Journey_ Navigating Your Cumulative Experience at Iowa State University.pdf"
+              target="_blank" rel="noopener noreferrer">Read PDF -></a>
+          </div>
+        </div>
+
+        <div class="writing-card">
+          <div class="writing-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="writing-info">
+            <h3>The Ethics of AI: A Case Study</h3>
+            <p>An examination of ethical considerations and real-world implications surrounding artificial intelligence.</p>
+            <a href="documents/The Ethics Of AI - Case Study.pdf" target="_blank" rel="noopener noreferrer">Read PDF -></a>
+          </div>
+        </div>
+
+      </div>
+      <hr>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <p class="contact-intro">Have a question or want to get in touch? Fill out the form below and it will open in your
+        email client ready to send.</p>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Your Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-subject">Subject</label>
+          <input type="text" id="contact-subject" name="subject" placeholder="What is this about?" required>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="6" placeholder="Write your message here..."
+            required></textarea>
+        </div>
+        <button type="submit" class="contact-submit">Send Message -></button>
+      </form>
     </section>
   </main>
 
