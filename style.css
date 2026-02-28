@@ -279,15 +279,14 @@ a {
 .project-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   max-width: 400px;
-  height: 335px;
-  overflow: hidden;
   background: var(--semitransparent-bg);
   box-sizing: border-box;
   border-radius: 12px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
 }
 
 .project-item:hover {
@@ -298,13 +297,79 @@ a {
 .project-item img {
   width: 100%;
   height: 200px;
+  object-fit: cover;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
+  display: block;
 }
 
 .project-item img:hover {
   transform: scale(1.03);
   box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px 14px;
+  flex: 1;
+}
+
+.project-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.project-details summary {
+  cursor: pointer;
+  color: var(--link-color);
+  font-size: 0.85rem;
+  font-weight: bold;
+  list-style: none;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-details summary::before {
+  content: "+ ";
+}
+
+.project-details[open] summary::before {
+  content: "- ";
+}
+
+.project-meta {
+  margin: 6px 0 0 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 10px;
+  font-size: 0.85rem;
+}
+
+.project-meta dt {
+  color: var(--link-color);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.project-meta dd {
+  margin: 0;
+  color: var(--secondary-text);
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 0.9rem;
 }
 
 .project-item audio {
@@ -364,6 +429,132 @@ a {
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
+}
+
+.writings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.writings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.writing-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: var(--semitransparent-bg);
+  box-shadow: 0 2px 6px var(--shadow-color);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.writing-card:hover {
+  box-shadow: 0 4px 12px var(--shadow-color);
+  transform: scale(1.01);
+}
+
+.writing-icon {
+  font-size: 2.5rem;
+  color: var(--link-color);
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.writing-info h3 {
+  margin: 0 0 6px 0;
+}
+
+.writing-info p {
+  margin: 0 0 10px 0;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-intro {
+  color: var(--secondary-text);
+  margin: 0 0 16px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--semitransparent-bg);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--accent-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--primary-text);
+  font: 0.95rem Inconsolata, monospace;
+  padding: 8px 12px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--link-color);
+  box-shadow: 0 0 6px rgba(255, 217, 0, 0.3);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--link-color);
+  border-radius: 8px;
+  color: var(--link-color);
+  cursor: pointer;
+  font: bold 1rem Inconsolata, monospace;
+  padding: 8px 20px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.contact-submit:hover {
+  background: var(--link-color);
+  color: #000;
+  box-shadow: 0 0 10px rgba(255, 217, 0, 0.4);
 }
 
 /* Mobile Styles */
@@ -444,5 +635,14 @@ a {
 
   .project-item {
     width: 90%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-submit {
+    width: 100%;
+    text-align: center;
   }
 }
