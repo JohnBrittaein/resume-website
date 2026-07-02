@@ -13,29 +13,66 @@ function toggleDropdown(dropdownID) {
   }
 }
 
+let lightboxImages = [];
+let lightboxIndex = 0;
+let lightboxGallery = null;
+
 document.querySelectorAll(".project-item img").forEach((image) => {
   image.addEventListener("click", () => {
-    openLightbox(image.src);
+    const gallery = image.closest("[data-gallery]");
+    if (gallery && gallery.galleryImages) {
+      openLightbox(gallery.galleryImages, gallery.currentIndex, gallery);
+    } else {
+      openLightbox([image.src], 0, null);
+    }
   });
 });
 
 document.addEventListener("keydown", (event) => {
+  if (document.getElementById("lightbox").style.display !== "flex") return;
   if (event.key === "Escape") {
     closeLightbox();
+  } else if (event.key === "ArrowRight") {
+    lightboxGoTo(lightboxIndex + 1);
+  } else if (event.key === "ArrowLeft") {
+    lightboxGoTo(lightboxIndex - 1);
   }
 });
 
-function openLightbox(src) {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  lightbox.style.display = "flex";
-  lightboxImg.src = src;
+function openLightbox(images, index, gallery) {
+  lightboxImages = images;
+  lightboxIndex = index;
+  lightboxGallery = gallery;
+  renderLightbox();
+  document.getElementById("lightbox").style.display = "flex";
+}
+
+function renderLightbox() {
+  document.getElementById("lightbox-img").src = lightboxImages[lightboxIndex];
+  const hasMultiple = lightboxImages.length > 1;
+  document.getElementById("lightbox-prev").style.display = hasMultiple ? "flex" : "none";
+  document.getElementById("lightbox-next").style.display = hasMultiple ? "flex" : "none";
+}
+
+function lightboxGoTo(i) {
+  lightboxIndex = (i + lightboxImages.length) % lightboxImages.length;
+  renderLightbox();
+  if (lightboxGallery) lightboxGallery.goToImage(lightboxIndex);
 }
 
 function closeLightbox() {
   const lightbox = document.getElementById("lightbox");
   lightbox.style.display = "none";
 }
+
+document.getElementById("lightbox-prev").addEventListener("click", (event) => {
+  event.stopPropagation();
+  lightboxGoTo(lightboxIndex - 1);
+});
+document.getElementById("lightbox-next").addEventListener("click", (event) => {
+  event.stopPropagation();
+  lightboxGoTo(lightboxIndex + 1);
+});
 
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
@@ -71,6 +108,27 @@ function activateTab(targetSelector) {
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => activateTab(tab.dataset.tabTarget))
 })
+
+function jumpToTarget(tabSelector, targetSelectors) {
+  if (tabSelector) activateTab(tabSelector);
+  const selectors = targetSelectors.split(",").map((s) => s.trim()).filter(Boolean);
+  const targetEls = selectors.map((sel) => document.querySelector(sel)).filter(Boolean);
+  if (targetEls.length === 0) return;
+  setTimeout(() => {
+    targetEls[0].scrollIntoView({ behavior: "smooth", block: "center" });
+    targetEls.forEach((el) => {
+      el.classList.add("project-highlight");
+      setTimeout(() => el.classList.remove("project-highlight"), 1800);
+    });
+  }, 50);
+}
+
+document.querySelectorAll(".skill-tag-link[data-target-projects]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    jumpToTarget(link.dataset.targetTab, link.dataset.targetProjects);
+  });
+});
 
 // Featured Projects Carousel
 const featuredCarousel = document.querySelector(".featured-carousel");
@@ -134,14 +192,7 @@ if (featuredCarousel) {
     const link = slide.querySelector(".featured-slide-link");
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      activateTab(slide.dataset.targetTab);
-      const projectEl = document.querySelector(slide.dataset.targetProject);
-      if (!projectEl) return;
-      setTimeout(() => {
-        projectEl.scrollIntoView({ behavior: "smooth", block: "center" });
-        projectEl.classList.add("project-highlight");
-        setTimeout(() => projectEl.classList.remove("project-highlight"), 1800);
-      }, 50);
+      jumpToTarget(slide.dataset.targetTab, slide.dataset.targetProject);
     });
   });
 
@@ -149,5 +200,36 @@ if (featuredCarousel) {
   startAutoplay();
 }
 
+// Project Card Photo Galleries
+document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+  const images = gallery.dataset.images.split(",").map((s) => s.trim()).filter(Boolean);
+  const imgEl = gallery.querySelector("[data-gallery-img]");
+  const counterEl = gallery.querySelector("[data-gallery-counter]");
+  const prevBtn = gallery.querySelector(".gallery-prev");
+  const nextBtn = gallery.querySelector(".gallery-next");
 
+  gallery.galleryImages = images;
+  gallery.currentIndex = 0;
+
+  function render() {
+    imgEl.src = images[gallery.currentIndex];
+    counterEl.textContent = `${gallery.currentIndex + 1} / ${images.length}`;
+  }
+
+  gallery.goToImage = (i) => {
+    gallery.currentIndex = (i + images.length) % images.length;
+    render();
+  };
+
+  prevBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    gallery.goToImage(gallery.currentIndex - 1);
+  });
+  nextBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    gallery.goToImage(gallery.currentIndex + 1);
+  });
+
+  render();
+});
 
