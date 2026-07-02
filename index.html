@@ -212,6 +212,75 @@
     <section id="Portfolio" class="portfolio" aria-labelledby="portfolio-heading">
       <h2 id="portfolio-heading">Projects</h2>
 
+      <div class="featured-carousel" data-autoplay="6000" aria-roledescription="carousel" aria-label="Featured projects">
+        <div class="featured-viewport">
+          <ul class="featured-track">
+            <li class="featured-slide" data-target-tab="#engineering-projects" data-target-project="#project-cyflybot">
+              <a class="featured-slide-link" href="#project-cyflybot">
+                <div class="featured-media">
+                  <img src="images/projects/CyFlyBotLogo_v1.png" alt="CYFLYBOT logo" loading="lazy">
+                </div>
+                <div class="featured-info">
+                  <p class="featured-eyebrow">Featured Project</p>
+                  <p class="featured-title">CYFLYBOT &ndash; Senior Design Project</p>
+                  <p class="featured-subtitle">A drone and a ground robot that coordinate with each other to run
+                    warehouse missions autonomously.</p>
+                  <span class="featured-cta">View project -&gt;</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="featured-slide" data-target-tab="#engineering-projects" data-target-project="#project-fpga-looper">
+              <a class="featured-slide-link" href="#project-fpga-looper">
+                <div class="featured-media">
+                  <img src="images/projects/FPGALooperBlockDiagram.png" alt="FPGA Audio Looping Station block diagram" loading="lazy">
+                </div>
+                <div class="featured-info">
+                  <p class="featured-eyebrow">Featured Project</p>
+                  <p class="featured-title">FPGA Audio Looping Station</p>
+                  <p class="featured-subtitle">A hardware 4-track looper pedal, run by an FPGA, that I designed,
+                    3D-printed, and soldered myself.</p>
+                  <span class="featured-cta">View project -&gt;</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="featured-slide" data-target-tab="#engineering-projects" data-target-project="#project-you-can-run">
+              <a class="featured-slide-link" href="#project-you-can-run">
+                <div class="featured-media">
+                  <img src="images/projects/YouCanRunPreview.png" alt="You Can Run AR horror app screens" loading="lazy">
+                </div>
+                <div class="featured-info">
+                  <p class="featured-eyebrow">Featured Project</p>
+                  <p class="featured-title">You Can Run &ndash; AR Horror App</p>
+                  <p class="featured-subtitle">An AR horror game where a 3D monster hunts you down using a real
+                    pursuit algorithm and your phone's own sensors.</p>
+                  <span class="featured-cta">View project -&gt;</span>
+                </div>
+              </a>
+            </li>
+
+            <li class="featured-slide" data-target-tab="#engineering-projects" data-target-project="#project-wackah-mole">
+              <a class="featured-slide-link" href="#project-wackah-mole">
+                <div class="featured-media">
+                  <img src="images/projects/WackahMolePreview.jpg" alt="Wackah Mole whack-a-mole game preview" loading="lazy">
+                </div>
+                <div class="featured-info">
+                  <p class="featured-eyebrow">Featured Project</p>
+                  <p class="featured-title">Wackah Mole</p>
+                  <p class="featured-subtitle">A classic whack-a-mole game, but the mole's brain runs on
+                    reinforcement learning.</p>
+                  <span class="featured-cta">View project -&gt;</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="featured-nav featured-prev" aria-label="Previous featured project">&#10094;</button>
+        <button type="button" class="featured-nav featured-next" aria-label="Next featured project">&#10095;</button>
+        <div class="featured-dots" role="tablist" aria-label="Featured project slides"></div>
+      </div>
+
       <ul class="tabs">
         <li data-tab-target="#personal-projects" class="tab">Personal</li>
         <li data-tab-target="#engineering-projects" class="active tab">Engineering</li>
@@ -229,11 +298,14 @@
               </div>
               <div class="project-body">
                 <p class="project-title">Fallout Terminal Emulator</p>
+                <p class="project-subtitle">A playable clone of Fallout's word-guessing hacking terminal, built from
+                  scratch in Python.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
                     <dt>Description</dt>
-                    <dd>Emulation of the terminal minigame within the Fallout game series.</dd>
+                    <dd>Recreates the terminal hacking minigame from the Fallout series, including the CRT scanline
+                      look, dud removal, and lockout mechanic.</dd>
                     <dt>Role</dt>
                     <dd>Sole developer - designed and implemented all aspects of the terminal emulator.</dd>
                     <dt>Skills Gained</dt>
@@ -246,13 +318,16 @@
             </div>
 
             <div class="project-item">
+              <img src="images/projects/catvsdogs.png" alt="Cat VS Dogs classifier output showing a cat and a dog correctly identified" loading="lazy">
               <div class="project-body">
                 <p class="project-title">Cat VS Dogs AI Classifier</p>
+                <p class="project-subtitle">A neural network that tells cats and dogs apart from a single photo.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
                     <dt>Description</dt>
-                    <dd>A Python-based image classifier that uses machine learning to distinguish between cats and dogs.</dd>
+                    <dd>Trains a convolutional neural network on labeled cat and dog images, then evaluates how
+                      accurately it classifies photos it has never seen.</dd>
                     <dt>Role</dt>
                     <dd>Sole developer - designed, trained, and evaluated the model.</dd>
                     <dt>Skills Gained</dt>
@@ -275,11 +350,13 @@
               </div>
               <div class="project-body">
                 <p class="project-title">"Armonica" Inspired Sampled Instrument</p>
+                <p class="project-subtitle">A glass-harmonica-style instrument sampled from a single tuned wine glass.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
                     <dt>Description</dt>
-                    <dd>A sampled instrument inspired by the "Armonica" - a unique musical instrument which uses tuned glass bowls (I imitated the sound with a wine glass).</dd>
+                    <dd>Recreates the ethereal tone of Benjamin Franklin's glass armonica by sampling a tuned wine
+                      glass and mapping it into a playable instrument.</dd>
                     <dt>Role</dt>
                     <dd>Sole developer - designed and implemented all aspects of the sampled instrument.</dd>
                     <dt>Skills Gained</dt>
@@ -296,10 +373,12 @@
         <div id="engineering-projects" data-tab-content class="active">
           <div class="projects">
 
-            <div class="project-item">
+            <div class="project-item" id="project-cyflybot">
               <img src="images/projects/CyFlyBotLogo_v1.png" alt="CYFLYBOT Logo" loading="lazy">
               <div class="project-body">
                 <p class="project-title">CYFLYBOT - Senior Design Project</p>
+                <p class="project-subtitle">A drone and a ground robot that coordinate with each other to run
+                  warehouse missions autonomously.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
@@ -325,6 +404,8 @@
               <img src="images/projects/sequencerproject.png" alt="Sequencer Diagram" loading="lazy">
               <div class="project-body">
                 <p class="project-title">12 Step Digital Sequencer</p>
+                <p class="project-subtitle">A hardware step sequencer built entirely out of digital logic on an
+                  FPGA.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
@@ -351,6 +432,8 @@
               <img src="images/projects/IMG_8652.jpeg" alt="Clean Up Robot" loading="lazy">
               <div class="project-body">
                 <p class="project-title">Clean Up Robot</p>
+                <p class="project-subtitle">An autonomous robot that scans a room, finds objects, and picks them up
+                  with a 3D-printed gripper arm.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
@@ -383,6 +466,7 @@
               </div>
               <div class="project-body">
                 <p class="project-title">Modular Sequencer in MAX</p>
+                <p class="project-subtitle">A patch-based modular sequencer built from scratch in Max/MSP.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
@@ -409,6 +493,8 @@
               <img src="images/projects/HardwareScheduledProcessorSchematic.png" alt="MIPS Processor Schematic" loading="lazy">
               <div class="project-body">
                 <p class="project-title">MIPS CPUs</p>
+                <p class="project-subtitle">Custom MIPS processors, from a single-cycle design up to a full pipelined
+                  CPU.</p>
                 <details class="project-details">
                   <summary>Details</summary>
                   <dl class="project-meta">
@@ -425,6 +511,126 @@
                 </details>
                 <div class="project-links">
                   <a href="documents/reports/Proj3_Report.pdf" target="_blank" rel="noopener noreferrer"><i
+                      class="fas fa-file-alt"></i> View the full project report</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-item" id="project-fpga-looper">
+              <img src="images/projects/FPGALooperBlockDiagram.png" alt="FPGA Audio Looping Station Loop Control block diagram" loading="lazy">
+              <div class="project-body">
+                <p class="project-title">FPGA Audio Looping Station</p>
+                <p class="project-subtitle">A hardware 4-track looper pedal, run by an FPGA, that I designed,
+                  3D-printed, and soldered myself.</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>A 4-channel audio looping station built on a Zynq 7000 FPGA, with a custom guitar pedal
+                      housing an ESP32-based footswitch controller for record/overdub/monitor control and
+                      synchronized or independent loop lengths per track.</dd>
+                    <dt>Role</dt>
+                    <dd>Team member (4-person team) - contributed to VHDL design of the audio signal path and loop
+                      control finite state machines and UART integration with the pedal board, and designed,
+                      3D-printed, and soldered the physical guitar pedal enclosure and footswitch hardware.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>VHDL, FPGA development, digital audio signal processing, finite state machines, I2S/UART
+                      protocols, enclosure design and fabrication, soldering.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>Xilinx Vivado, Zynq 7000 FPGA, ESP32, Pmod I2S2, 3D printer, soldering iron.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="documents/reports/FPGA_Looping_Station_Report.pdf" target="_blank" rel="noopener noreferrer"><i
+                      class="fas fa-file-alt"></i> View the full project report</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-item" id="project-you-can-run">
+              <img src="images/projects/YouCanRunPreview.png" alt="You Can Run AR horror app screens" loading="lazy">
+              <div class="project-body">
+                <p class="project-title">You Can Run - AR Horror App</p>
+                <p class="project-subtitle">An AR horror game where a 3D monster hunts you down using a real
+                  pursuit algorithm and your phone's own sensors.</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>An augmented-reality horror experience for Android featuring a 3D monster entity that uses a
+                      pursuit algorithm to chase the player. Accelerometer and other onboard sensors are fused to
+                      calculate the player's real-world position and track their movement in real time.</dd>
+                    <dt>Role</dt>
+                    <dd>Team member (3-person team) - contributed to AR tracking, sensor fusion for real-world
+                      positioning, and gameplay logic.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Android development, augmented reality, sensor fusion, pursuit algorithms, real-time
+                      UI/UX design.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>Android Studio, on-device AR and motion sensors (accelerometer, etc.).</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="https://github.com/JohnBrittaein/You-Can-Run" target="_blank" rel="noopener noreferrer"><i
+                      class="fab fa-github"></i> View on GitHub</a>
+                  <a href="documents/reports/You_Can_Run_Presentation.pdf" target="_blank" rel="noopener noreferrer"><i
+                      class="fas fa-file-alt"></i> View the project presentation</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-item" id="project-wackah-mole">
+              <img src="images/projects/WackahMolePreview.jpg" alt="Wackah Mole whack-a-mole game preview" loading="lazy">
+              <div class="project-body">
+                <p class="project-title">Wackah Mole</p>
+                <p class="project-subtitle">A classic whack-a-mole game, but the mole's brain runs on reinforcement
+                  learning.</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>A whack-a-mole style Android game where the mole's behavior is driven by a reinforcement
+                      learning algorithm rather than scripted movement, with animated sprites, a game timer, and
+                      score tracking.</dd>
+                    <dt>Role</dt>
+                    <dd>Team member (3-person team) - designed the mole's reinforcement-learning "brain," created
+                      the game art, and implemented the gameplay logic.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Reinforcement learning, Android development, game art and asset design, game loop design.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>Android Studio, Gradle.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="https://github.com/JohnBrittaein/Wackah_Mole" target="_blank" rel="noopener noreferrer"><i
+                      class="fab fa-github"></i> View on GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-item" id="project-blockchain-insurance">
+              <div class="project-item-icon" aria-hidden="true"><i class="fas fa-link"></i></div>
+              <div class="project-body">
+                <p class="project-title">Blockchain Flight Insurance (Ethereum)</p>
+                <p class="project-subtitle">A smart contract that pays out flight-delay insurance automatically when
+                  bad weather hits.</p>
+                <details class="project-details">
+                  <summary>Details</summary>
+                  <dl class="project-meta">
+                    <dt>Description</dt>
+                    <dd>A Solidity smart contract that sells parametric flight-delay/weather insurance policies and
+                      autonomously pays out indemnities using a live weather.gov oracle script.</dd>
+                    <dt>Role</dt>
+                    <dd>Sole developer - designed and implemented the smart contract, oracle verification scripts,
+                      and gas-cost analysis.</dd>
+                    <dt>Skills Gained</dt>
+                    <dd>Solidity, smart contract design, blockchain oracles, gas optimization.</dd>
+                    <dt>Resources Used</dt>
+                    <dd>Remix IDE, Ethereum (Solidity 0.8.x), weather.gov API.</dd>
+                  </dl>
+                </details>
+                <div class="project-links">
+                  <a href="documents/reports/CPRE_4500_Project3_FlightInsurance_Ethereum.pdf" target="_blank" rel="noopener noreferrer"><i
                       class="fas fa-file-alt"></i> View the full project report</a>
                 </div>
               </div>

@@ -134,6 +134,210 @@ header {
   border-radius: 12px;
 }
 
+.featured-carousel {
+  position: relative;
+  margin: 0 0 20px;
+  border-radius: 12px;
+  background: var(--semitransparent-bg);
+  box-shadow: 0 2px 6px var(--shadow-color);
+  overflow: hidden;
+}
+
+.featured-viewport {
+  overflow: hidden;
+}
+
+.featured-track {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease;
+}
+
+.featured-slide {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.featured-slide-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--primary-text);
+  min-height: 180px;
+}
+
+.featured-media {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.featured-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.12);
+  display: block;
+}
+
+.featured-slide-icon {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--link-color);
+  background: var(--secondary-bg);
+  flex-shrink: 0;
+}
+
+.featured-info {
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  justify-content: center;
+  flex: 1;
+  text-align: left;
+}
+
+.featured-eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--link-color);
+}
+
+.featured-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.featured-subtitle {
+  margin: 0;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  max-width: 46ch;
+}
+
+.featured-cta {
+  margin-top: 8px;
+  color: var(--link-color);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.featured-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--lesstransparent-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 2;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.featured-nav:hover {
+  color: var(--link-color);
+  border-color: var(--link-color);
+  background: var(--secondary-bg);
+}
+
+.featured-nav:focus-visible,
+.featured-dot:focus-visible,
+.featured-slide-link:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.featured-prev {
+  left: 10px;
+}
+
+.featured-next {
+  right: 10px;
+}
+
+.featured-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 999px;
+  z-index: 3;
+}
+
+.featured-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background: var(--accent-color);
+  cursor: pointer;
+  padding: 0;
+  outline-offset: 2px;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.featured-dot.active {
+  background: var(--link-color);
+  border-color: var(--link-color);
+  transform: scale(1.15);
+}
+
+.project-highlight {
+  animation: project-highlight-pulse 1.8s ease;
+}
+
+@keyframes project-highlight-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 217, 0, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 14px rgba(255, 217, 0, 0);
+  }
+}
+
+@media (min-width: 700px) {
+  .featured-slide-link {
+    flex-direction: row;
+    align-items: stretch;
+    height: 220px;
+  }
+
+  .featured-media,
+  .featured-slide-icon {
+    width: 42%;
+    height: 220px;
+  }
+
+  .featured-nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1rem;
+  }
+}
+
 .tab{
   cursor: pointer;
   font-weight: bold;
@@ -308,6 +512,19 @@ a {
   box-shadow: 0 0 10px var(--shadow-color);
 }
 
+.project-item-icon {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--link-color);
+  background: var(--secondary-bg);
+  flex-shrink: 0;
+}
+
 .project-body {
   display: flex;
   flex-direction: column;
@@ -320,6 +537,13 @@ a {
   margin: 0;
   font-weight: bold;
   font-size: 1rem;
+}
+
+.project-subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: var(--primary-text);
 }
 
 .project-details summary {

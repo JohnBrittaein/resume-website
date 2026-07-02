@@ -58,19 +58,96 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 const tabs = document.querySelectorAll('[data-tab-target]')
 const tabContents = document.querySelectorAll('[data-tab-content]')
 
+function activateTab(targetSelector) {
+  const targetTab = Array.from(tabs).find((tab) => tab.dataset.tabTarget === targetSelector)
+  const targetContent = document.querySelector(targetSelector)
+  if (!targetTab || !targetContent) return
+  tabContents.forEach((tabContent) => tabContent.classList.remove('active'))
+  tabs.forEach((tab) => tab.classList.remove('active'))
+  targetTab.classList.add('active')
+  targetContent.classList.add('active')
+}
+
 tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    const target = document.querySelector(tab.dataset.tabTarget)
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('active')
-    })
-    tabs.forEach(tab => {
-      tab.classList.remove('active')
-    })
-    tab.classList.add('active')
-    target.classList.add('active')
-  })
+  tab.addEventListener("click", () => activateTab(tab.dataset.tabTarget))
 })
+
+// Featured Projects Carousel
+const featuredCarousel = document.querySelector(".featured-carousel");
+if (featuredCarousel) {
+  const track = featuredCarousel.querySelector(".featured-track");
+  const slides = Array.from(featuredCarousel.querySelectorAll(".featured-slide"));
+  const dotsContainer = featuredCarousel.querySelector(".featured-dots");
+  const prevBtn = featuredCarousel.querySelector(".featured-prev");
+  const nextBtn = featuredCarousel.querySelector(".featured-next");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const autoplayDelay = parseInt(featuredCarousel.dataset.autoplay, 10) || 6000;
+
+  let index = 0;
+  let autoplayTimer = null;
+
+  slides.forEach((slide, i) => {
+    const dot = document.createElement("button");
+    dot.type = "button";
+    dot.className = "featured-dot";
+    dot.setAttribute("aria-label", `Go to featured project ${i + 1}`);
+    dot.addEventListener("click", () => goTo(i, true));
+    dotsContainer.appendChild(dot);
+  });
+  const dots = Array.from(dotsContainer.children);
+
+  function render() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  function goTo(i, userInitiated) {
+    index = (i + slides.length) % slides.length;
+    render();
+    if (userInitiated) restartAutoplay();
+  }
+
+  function startAutoplay() {
+    if (prefersReducedMotion || slides.length <= 1) return;
+    stopAutoplay();
+    autoplayTimer = setInterval(() => goTo(index + 1), autoplayDelay);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) clearInterval(autoplayTimer);
+  }
+
+  function restartAutoplay() {
+    stopAutoplay();
+    startAutoplay();
+  }
+
+  prevBtn.addEventListener("click", () => goTo(index - 1, true));
+  nextBtn.addEventListener("click", () => goTo(index + 1, true));
+
+  featuredCarousel.addEventListener("mouseenter", stopAutoplay);
+  featuredCarousel.addEventListener("mouseleave", startAutoplay);
+  featuredCarousel.addEventListener("focusin", stopAutoplay);
+  featuredCarousel.addEventListener("focusout", startAutoplay);
+
+  slides.forEach((slide) => {
+    const link = slide.querySelector(".featured-slide-link");
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      activateTab(slide.dataset.targetTab);
+      const projectEl = document.querySelector(slide.dataset.targetProject);
+      if (!projectEl) return;
+      setTimeout(() => {
+        projectEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        projectEl.classList.add("project-highlight");
+        setTimeout(() => projectEl.classList.remove("project-highlight"), 1800);
+      }, 50);
+    });
+  });
+
+  render();
+  startAutoplay();
+}
 
 
 
