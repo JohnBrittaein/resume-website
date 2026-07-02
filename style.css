@@ -122,21 +122,33 @@ header {
 .active[data-tab-content] {
   display: block;
   background: var(--semitransparent-bg);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.tab-intro {
+  margin: 0 0 12px;
+  padding: 0 16px;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .tabs {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  margin: 0px 0;
-  padding: 5px;
+  margin: 0;
+  padding: 12px 8px 6px;
   background: var(--semitransparent-bg);
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
 }
 
 .featured-carousel {
   position: relative;
-  margin: 0 0 20px;
+  margin: 0 0 36px;
   border-radius: 12px;
   background: var(--semitransparent-bg);
   box-shadow: 0 2px 6px var(--shadow-color);
@@ -543,8 +555,6 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
   gap: 1.5rem;
   justify-items: center;
-  box-shadow: 0 2px 6px var(--shadow-color);
-  border-radius: 12px;
 }
 
 .project-item {
