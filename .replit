@@ -1,10 +1,9 @@
-entrypoint="index.html"
-hidden=[".config"]
-modules = ["web:v2-20230623-0b7a606"]
-
-[nix]
-channel = "stable-23_11"
+entrypoint = "content/site.js"
+hidden = [".config", "node_modules", "dist", ".cache"]
+modules = ["nodejs-22"]
+run = "npm run dev"
 
 [deployment]
-publicDir = "/"
+build = ["sh", "-c", "npm ci && npm run build"]
+publicDir = "dist"
 deploymentTarget = "static"

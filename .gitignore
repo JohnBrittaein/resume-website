@@ -1,1 +1,8 @@
 node_modules/
+dist/
+.cache/
+
+# Full-resolution camera originals. Never commit these; pick selects and run
+# `npm run photos:import` (see docs/CONTENT.md) to make web-sized copies.
+images/photos/
+photo-originals/

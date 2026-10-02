@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#151515"/>
+  <rect x="46" y="8" width="10" height="10" fill="#ffd900"/>
+  <text x="8" y="54" font-family="Archivo, 'Arial Narrow', Arial, sans-serif" font-weight="800" font-size="34" fill="#efece5" textLength="44" lengthAdjust="spacingAndGlyphs">JB</text>
+</svg>

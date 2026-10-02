@@ -1,0 +1,20 @@
+{
+  "name": "john-brittain-site",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Personal portfolio of John Brittain: photography, music, video, and engineering. Static site built by a small Node script.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:drafts": "node scripts/build.mjs --drafts",
+    "dev": "node scripts/dev.mjs",
+    "check": "node scripts/check.mjs",
+    "photos:import": "node scripts/import-photos.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.35.5"
+  }
+}

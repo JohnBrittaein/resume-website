@@ -1,0 +1,16 @@
+{
+  "name": "John Brittain",
+  "short_name": "John Brittain",
+  "description": "Photography, music, and machines.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#efece5",
+  "theme_color": "#151515",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

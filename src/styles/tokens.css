@@ -1,0 +1,119 @@
+/* ------------------------------------------------------------------
+   Design tokens: retro CRT, carried over from the previous site
+
+   Type: Inconsolata everywhere (the old site's font), with the old white
+   phosphor glow on headings and signal yellow (#ffd900) as the accent.
+
+   Grounds are solid colors (set with data-theme on <body> or on any band):
+     crt    home, about, contact: midnight navy
+     dark   photography, video: neutral near-black so photographs stay true
+     music  deep synthwave purple, under the old site's header art
+     art    warm dark "gallery wall" for collages and renders
+     work   blueprint blue with a drafting grid
+   ------------------------------------------------------------------ */
+
+:root {
+  --font-sans: "Inconsolata", ui-monospace, "Cascadia Mono", Consolas, "SFMono-Regular", Menlo, monospace;
+  --font-mono: var(--font-sans);
+
+  --signal: #ffd900;
+  --signal-ink: #111111;
+
+  /* Type scale (monospace runs wide, so display sizes are modest) */
+  --fs-mono: 0.8rem;
+  --fs-small: 0.95rem;
+  --fs-body: 1.125rem;
+  --fs-lede: clamp(1.2rem, 1.05rem + 0.5vw, 1.45rem);
+  --fs-h3: clamp(1.2rem, 1.05rem + 0.5vw, 1.45rem);
+  --fs-h2: clamp(1.8rem, 1.2rem + 2.2vw, 3rem);
+  --fs-h1: clamp(2.6rem, 1.2rem + 5.4vw, 6.25rem);
+
+  /* One container width for everything, so edges line up at every screen size. */
+  --gutter: clamp(1rem, 0.5rem + 2.4vw, 2.5rem);
+  --section: clamp(4rem, 2.5rem + 6vw, 8rem);
+  --gap: clamp(0.5rem, 0.3rem + 0.6vw, 0.875rem);
+  --max: 1440px;
+  --header-h: 3.75rem;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+[data-theme="crt"] {
+  --bg: #0a0e27;
+  --fg: #f2f2f2;
+  --muted: #a7abc0;
+  --line: rgba(242, 242, 242, 0.16);
+  --line-strong: rgba(242, 242, 242, 0.85);
+  --surface: #141a3d;
+  --focus: var(--signal);
+  --link-hover-fg: var(--signal);
+  --glow: 0 0 6px rgba(200, 200, 200, 0.65);
+  --glow-soft: 0 0 4px rgba(200, 200, 200, 0.35);
+  color-scheme: dark;
+}
+
+[data-theme="dark"] {
+  --bg: #0a0a0a;
+  --fg: #ebe8e1;
+  --muted: #9a968d;
+  --line: rgba(235, 232, 225, 0.14);
+  --line-strong: rgba(235, 232, 225, 0.8);
+  --surface: #161616;
+  --focus: var(--signal);
+  --link-hover-fg: var(--signal);
+  --glow: 0 0 6px rgba(200, 200, 200, 0.5);
+  --glow-soft: none;
+  color-scheme: dark;
+}
+
+[data-theme="music"] {
+  --bg: #1a0b2e;
+  --fg: #f7eefc;
+  --muted: #bca7d4;
+  --line: rgba(247, 238, 252, 0.16);
+  --line-strong: rgba(247, 238, 252, 0.8);
+  --surface: #28143f;
+  --focus: var(--signal);
+  --link-hover-fg: var(--signal);
+  --glow: 0 0 8px rgba(255, 120, 220, 0.6);
+  --glow-soft: 0 0 4px rgba(255, 150, 230, 0.3);
+  color-scheme: dark;
+}
+
+[data-theme="art"] {
+  --bg: #1d1a17;
+  --fg: #f1ebe2;
+  --muted: #aaa196;
+  --line: rgba(241, 235, 226, 0.15);
+  --line-strong: rgba(241, 235, 226, 0.8);
+  --surface: #2a2622;
+  --focus: var(--signal);
+  --link-hover-fg: var(--signal);
+  --glow: 0 0 6px rgba(230, 215, 190, 0.45);
+  --glow-soft: none;
+  color-scheme: dark;
+}
+
+[data-theme="work"] {
+  --bg: #0d3170;
+  --fg: #eaf1ff;
+  --muted: #a9c1e8;
+  --line: rgba(234, 241, 255, 0.22);
+  --line-strong: rgba(234, 241, 255, 0.85);
+  --surface: rgba(234, 241, 255, 0.08);
+  --focus: var(--signal);
+  --link-hover-fg: var(--signal);
+  --glow: 0 0 6px rgba(190, 215, 255, 0.55);
+  --glow-soft: 0 0 3px rgba(190, 215, 255, 0.25);
+  color-scheme: dark;
+}
+
+/* Work keeps its drafting grid on top of the solid blueprint blue. */
+body[data-theme="work"] {
+  background:
+    linear-gradient(rgba(234, 241, 255, 0.13) 1px, transparent 1px) 0 0 / 120px 120px,
+    linear-gradient(90deg, rgba(234, 241, 255, 0.13) 1px, transparent 1px) 0 0 / 120px 120px,
+    linear-gradient(rgba(234, 241, 255, 0.055) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(234, 241, 255, 0.055) 1px, transparent 1px) 0 0 / 24px 24px,
+    #0d3170;
+}
