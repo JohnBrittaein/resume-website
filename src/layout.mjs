@@ -12,7 +12,7 @@ export const NAV = [
   { label: "Contact", href: "/contact/", section: "contact" },
 ];
 
-const THEME_COLOR = { crt: "#0a0e27", dark: "#0a0a0a", music: "#1a0b2e", work: "#0d3170", art: "#1d1a17" };
+const THEME_COLOR = { crt: "#0a0e27", dark: "#000000", music: "#1a0b2e", work: "#0d3170", art: "#1d1a17" };
 
 const FONTS =
   "https://fonts.googleapis.com/css2?family=Inconsolata:wght@400..900&display=swap";

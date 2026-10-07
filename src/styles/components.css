@@ -786,3 +786,34 @@
   border-color: var(--signal);
   box-shadow: 0 0 8px rgba(255, 217, 0, 0.35);
 }
+
+/* Gallery captions: hidden on the page, revealed on hover/focus (the full-screen
+   viewer always shows them). Touch screens have no hover, so they rely on the viewer. */
+.justify__item {
+  position: relative;
+}
+.justify__item .justify__cap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 1.5rem 0.75rem 0.6rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+  color: #f2f2f2;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.justify__item:hover .justify__cap,
+.justify__item:focus-within .justify__cap {
+  opacity: 1;
+}
+@media (hover: none) {
+  .justify__item .justify__cap { display: none; }
+}
+/* Hero frame on photo pages: full width but never taller than the screen. */
+.justify--photos .justify__item--full img {
+  max-height: 88vh;
+  object-fit: cover;
+}

@@ -40,13 +40,15 @@ export function zoomable(image, { group, sizes, eager, className } = {}) {
 
 // Justified rows: every image keeps its own aspect ratio; rows fill the width.
 // Portrait and landscape mix freely; span: "full" gives an image its own row.
-export function gallery(images, { group = "gallery", row = 340, variant = "", captions = true } = {}) {
+export function gallery(images, { group = "gallery", row = 340, variant = "", captions = true, hero = false } = {}) {
   return html`<div class="justify ${variant}" style="--row:${row}px">
-    ${images.map((im) => {
+    ${images.map((im, i) => {
+      // Optional hero: the first landscape frame gets a row to itself.
+      if (hero && i === 0 && ratioOf(im) >= 1.3) im = { ...im, span: "full" };
       const ar = ratioOf(im);
       return html`<figure class="justify__item${im.span === "full" ? " justify__item--full" : ""}" style="--ar:${ar}">
         ${zoomable(im, { group, sizes: im.span === "full" ? "100vw" : `(max-width: 640px) 100vw, ${Math.round(Math.min(ar, 2.5) * row * 1.1)}px` })}
-        ${captions && im.caption ? html`<figcaption>${im.caption}</figcaption>` : ""}
+        ${captions && im.caption ? html`<figcaption class="justify__cap">${im.caption}</figcaption>` : ""}
       </figure>`;
     })}
   </div>`;

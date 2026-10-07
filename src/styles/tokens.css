@@ -53,15 +53,15 @@
 }
 
 [data-theme="dark"] {
-  --bg: #0a0a0a;
+  --bg: #000000;
   --fg: #ebe8e1;
   --muted: #9a968d;
   --line: rgba(235, 232, 225, 0.14);
   --line-strong: rgba(235, 232, 225, 0.8);
-  --surface: #161616;
+  --surface: #111111;
   --focus: var(--signal);
   --link-hover-fg: var(--signal);
-  --glow: 0 0 6px rgba(200, 200, 200, 0.5);
+  --glow: 0 0 3px rgba(200, 200, 200, 0.25);
   --glow-soft: none;
   color-scheme: dark;
 }

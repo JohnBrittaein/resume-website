@@ -54,7 +54,7 @@ export function artItem(ctx, item) {
     <div>${credits(item)}${linkList(item)}</div>
   </div>
 </article>
-<div class="wrap-wide item__gallery">${gallery(item.images, { group: item.slug, row: 380, captions: true })}</div>
+<div class="wrap-wide item__gallery">${gallery(item.images, { group: item.slug, row: 460, captions: true })}</div>
 ${prevNext(series, item)}`;
 
   return {

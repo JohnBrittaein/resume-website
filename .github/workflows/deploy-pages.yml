@@ -21,11 +21,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Project pages live at https://<user>.github.io/<repo>/.
-      # If you point a custom domain at GitHub Pages instead, set BASE_PATH to "/"
-      # and SITE_URL to that domain.
-      SITE_URL: https://johnbrittaein.github.io
-      BASE_PATH: /${{ github.event.repository.name }}/
+      # Served from the custom domain (set in repo Settings → Pages), so the site
+      # lives at the domain root. Without a custom domain it would instead be
+      # SITE_URL: https://johnbrittaein.github.io and BASE_PATH: /<repo>/
+      SITE_URL: https://johnbrittain.com
+      BASE_PATH: /
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

@@ -81,7 +81,7 @@ export function photographyProject(ctx, item) {
   </header>
   <div class="wrap-wide">
     ${item.images.length
-      ? gallery(item.images, { group: item.slug, row: 420, variant: "justify--photos", captions: true })
+      ? gallery(item.images, { group: item.slug, row: 560, variant: "justify--photos", captions: true, hero: true })
       : site.showPlaceholders
         ? html`<div class="justify justify--photos" style="--row:420px">${[1.5, 0.67, 1.5, 1.5, 0.8, 1.33].map((r) => html`<div class="justify__item" style="--ar:${r}">${placeholderFrame({ label: "[ADD PHOTO]", ratio: r })}</div>`)}</div>`
         : ""}

@@ -4,6 +4,6 @@ export default {
   date: "2026",
   location: "Iowa",
   cover: "DSC05685",
-  summary: "Rural Iowa in black and white.",
+  summary: "Rural Iowa.",
   description: "[ADD DESCRIPTION]",
 };
