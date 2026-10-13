@@ -3,7 +3,7 @@ export default {
   category: "documentary",
   date: "2026",
   location: "Des Moines",
-  cover: "DSC07362",
+  cover: "DSC07991",
   summary: "Bars and late nights in Des Moines.",
   description: "[ADD DESCRIPTION]",
 };
