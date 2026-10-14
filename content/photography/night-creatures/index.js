@@ -1,6 +1,5 @@
 export default {
   title: "Night Creatures",
-  draft: true, // hidden on the live site; visible in npm run dev
   category: "portraits",
   date: "2026",
   location: "Des Moines",
