@@ -71,6 +71,7 @@ export default {
       { slug: "concerts", label: "Concerts", group: "shows" },
       { slug: "events", label: "Events", group: "shows" },
       { slug: "skate", label: "Skate", group: "shows" },
+      { slug: "live", label: "Live Music", group: "collections" },
       { slug: "street", label: "Street", group: "collections" },
       { slug: "portraits", label: "Portraits", group: "collections" },
       { slug: "landscape", label: "Landscape", group: "collections" },
