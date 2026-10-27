@@ -205,7 +205,7 @@ Add `content/video/<slug>.js`:
 export default {
   title: "Band — Song",
   subtitle: "Music video",
-  category: "music-videos",     // music-videos | animation | documentary | demos
+  category: "music-videos",     // music-videos | short-films | animation | documentary | demos
   date: "2026-10",
   video: { youtube: "VIDEO_ID" },   // or { vimeo: "123456789" }
   description: "…",

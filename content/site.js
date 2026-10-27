@@ -89,6 +89,7 @@ export default {
     ],
     video: [
       { slug: "music-videos", label: "Music Videos" },
+      { slug: "short-films", label: "Short Films" },
       { slug: "animation", label: "Animation" },
       { slug: "documentary", label: "Documentary" },
       { slug: "demos", label: "Demos" },
