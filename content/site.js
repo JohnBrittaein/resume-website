@@ -3,9 +3,9 @@
 
 export default {
   name: "John Brittain",
-  tagline: "photography / music / machines",
+  tagline: "engineering / photography / music",
   description:
-    "John Brittain makes photographs, music, and machines: concert, skate, and event photography; composition and sound design; and engineering work in lab automation, robotics, and digital hardware.",
+    "John Brittain is a computer engineer working in lab automation, robotics, and digital hardware, and also a concert and event photographer and musician.",
 
   // The eventual production domain. Override at build time with the SITE_URL
   // environment variable (the GitHub Pages workflow does this).
@@ -46,10 +46,10 @@ export default {
   // [collection folder, photo file name without extension].
   home: {
     roles: [
+      { label: "Engineer", href: "/work/" },
       { label: "Photographer", href: "/photography/" },
       { label: "Musician", href: "/music/" },
       { label: "Artist", href: "/art/" },
-      { label: "Engineer", href: "/work/" },
     ],
     tiles: {
       photography: [

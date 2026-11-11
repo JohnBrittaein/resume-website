@@ -5,10 +5,10 @@ export default {
 
   // Paragraphs support [links](https://…), **bold**, and *italics*.
   intro: [
-    "Photographer, musician, and computer engineer in Des Moines, Iowa. Computer Engineering at Iowa State University, minor in Music Technology. Software and lab automation at Ames National Laboratory.",
+    "Computer engineer in Des Moines, Iowa, building software and lab automation at Ames National Laboratory. Computer Engineering at Iowa State University, minor in Music Technology. Outside the lab, I photograph concerts and events and make music.",
   ],
   // One line for the homepage "About" block.
-  short: "Photographer, musician, and computer engineer in Des Moines. Computer Engineering at Iowa State University; software and lab automation at Ames National Laboratory.",
+  short: "Computer engineer in Des Moines: software and lab automation at Ames National Laboratory, Computer Engineering at Iowa State University. Also a concert photographer and musician.",
 
   education: [
     {

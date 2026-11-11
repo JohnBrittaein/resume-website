@@ -3,11 +3,11 @@ import { html, raw, esc } from "../scripts/lib/html.mjs";
 import { url, abs } from "../scripts/lib/paths.mjs";
 
 export const NAV = [
+  { label: "Work", href: "/work/", section: "work" },
   { label: "Photography", href: "/photography/", section: "photography" },
   { label: "Music", href: "/music/", section: "music" },
   { label: "Art", href: "/art/", section: "art" },
   { label: "Video", href: "/video/", section: "video" },
-  { label: "Work", href: "/work/", section: "work" },
   { label: "About", href: "/about/", section: "about" },
   { label: "Contact", href: "/contact/", section: "contact" },
 ];
